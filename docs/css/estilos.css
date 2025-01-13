@@ -131,7 +131,8 @@ main{
 }
 
 .descripcion{
-  padding-left: 5%;
+  padding-left: 5vw;
+  text-align: left;
 }
 
 .container {
