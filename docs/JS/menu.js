@@ -33,9 +33,10 @@ function llamarDb(url) {
         const titulo = document.createElement("h3");
         titulo.classList.add("seccion");
         titulo.innerHTML = `${key}`;
-        // console.log(key);
+        console.log(key);
         if (key != "id") {
-          seccion.innerHTML="<div class= 'pictures'><img src='./imagenes/chop.jpg' alt='foto'></div>";
+          seccion.innerHTML =
+            `<div class= 'pictures' ><img src='./imagenes/${key}.jpg' alt='${key}'></div>`;
           for (const articulo in data[key]) {
             let $tipos = "";
             datos = data[key][articulo];
@@ -54,6 +55,7 @@ function llamarDb(url) {
                 }
               } else {
                 $tipos += `<div>
+              <span class="tipo">${element[0]}</span>
               <span class="precio">$ ${element[1]}</span>
               </div>
               `;
@@ -72,11 +74,9 @@ function llamarDb(url) {
             // console.log(datos[2][0][0]);
             // console.log(datos[2][0][1]);
             seccion.innerHTML += art;
-            
 
             document.querySelector(".menu").appendChild(titulo);
             document.querySelector(".menu").appendChild(seccion);
-            console.log(seccion);
           }
         }
       }
