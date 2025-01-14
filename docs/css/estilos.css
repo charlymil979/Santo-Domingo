@@ -100,7 +100,7 @@ main{
 
 .titular {
   margin: 1vw auto;
-  color:#443e3b
+  color:var(--claro)
 }
 
 .seccion1 {
